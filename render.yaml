@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: xezine-qapilari-live
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /healthz
+    envVars:
+      - key: TIKTOK_USER
+        value: bakuremixlab
